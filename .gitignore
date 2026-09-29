@@ -1,0 +1,18 @@
+# Virtualenv
+.venv/
+venv/
+
+# Local model weights (tens of GB, download separately)
+models/
+
+# Secrets — never commit the API key
+.env
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Large / regenerable artifacts
+artifacts/slice_*.json
+artifacts/typesafe_cache.json
+artifacts/*.incomplete

@@ -1,0 +1,87 @@
+{
+  "queries": 40,
+  "corpus": 3565,
+  "runs": [
+    {
+      "name": "BM25 (fast search)",
+      "top1": 0.05,
+      "top5": 0.15,
+      "top10": 0.375,
+      "auc": 0.528448275862069,
+      "mean_gold_rank": 14.675
+    },
+    {
+      "name": "Qwen3-Reranker-0.6B",
+      "top1": 0.025,
+      "top5": 0.125,
+      "top10": 0.375,
+      "auc": 0.5557543103448276,
+      "mean_gold_rank": 13.925,
+      "pairs": 1200,
+      "seconds": 129.01626920700073,
+      "seconds_per_query": 3.225406730175018,
+      "input_tokens": 1221924
+    },
+    {
+      "name": "Qwen3-Reranker-4B",
+      "top1": 0.075,
+      "top5": 0.275,
+      "top10": 0.475,
+      "auc": 0.678135775862069,
+      "mean_gold_rank": 11.05,
+      "pairs": 1200,
+      "seconds": 424.0174186229706,
+      "seconds_per_query": 10.600435465574265,
+      "input_tokens": 1221924
+    },
+    {
+      "name": "Qwen3-Reranker-8B",
+      "top1": 0.075,
+      "top5": 0.2,
+      "top10": 0.475,
+      "auc": 0.6343965517241379,
+      "mean_gold_rank": 11.7,
+      "pairs": 1200,
+      "seconds": 4467.87258887291,
+      "seconds_per_query": 111.69681472182273,
+      "input_tokens": 1221924
+    },
+    {
+      "name": "Qwen3-Reranker-8B (8bit)",
+      "top1": 0.05,
+      "top5": 0.2,
+      "top10": 0.475,
+      "auc": 0.6369719827586207,
+      "mean_gold_rank": 11.4,
+      "pairs": 1200,
+      "seconds": 612.5495841503143,
+      "seconds_per_query": 15.313739603757858,
+      "input_tokens": 1221924
+    },
+    {
+      "name": "TypeSafe jev-latest",
+      "top1": 0.325,
+      "top5": 0.5,
+      "top10": 0.675,
+      "auc": 0.7904418103448276,
+      "mean_gold_rank": 7.45,
+      "pairs": 1200,
+      "seconds": 33.044453382492065,
+      "seconds_per_query": 0.8261113345623017,
+      "input_tokens": 1676797,
+      "cost_usd": 0.070425474
+    }
+  ],
+  "top1_agreement": {
+    "Qwen3-Reranker-0.6B vs Qwen3-Reranker-4B": 0.25,
+    "Qwen3-Reranker-0.6B vs Qwen3-Reranker-8B": 0.2,
+    "Qwen3-Reranker-0.6B vs Qwen3-Reranker-8B (8bit)": 0.175,
+    "Qwen3-Reranker-0.6B vs TypeSafe jev-latest": 0.05,
+    "Qwen3-Reranker-4B vs Qwen3-Reranker-8B": 0.3,
+    "Qwen3-Reranker-4B vs Qwen3-Reranker-8B (8bit)": 0.3,
+    "Qwen3-Reranker-4B vs TypeSafe jev-latest": 0.075,
+    "Qwen3-Reranker-8B vs Qwen3-Reranker-8B (8bit)": 0.6,
+    "Qwen3-Reranker-8B vs TypeSafe jev-latest": 0.125,
+    "Qwen3-Reranker-8B (8bit) vs TypeSafe jev-latest": 0.15
+  }
+}

@@ -1,0 +1,10 @@
+# torch is installed separately from the cu128 index (Blackwell / sm_120 GPU):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+transformers>=4.51
+datasets>=3.0
+bm25s>=0.2
+matplotlib>=3.8
+numpy>=1.26
+# TypeSafe side (optional, only for run_typesafe.py)
+typesafe-sdk
+cooksafe>=0.2.0,<0.3.0
